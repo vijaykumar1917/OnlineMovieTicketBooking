@@ -1,0 +1,199 @@
+
+Post
+http://localhost:8081/addMovie
+
+{
+
+	"movieName" : "Akhanda",
+	"movieGenre" : "Drama",
+	"movieHours" : "02:30",
+	"language" : "telugu",
+	"description" : "director-Boyapati Srinu"
+	"summary":"Balakrishna plays a fierce devotee of Lord Shiva, who stands tall against evildoers"
+}
+
+Delete
+
+http://localhost:8081/removeMovie/1
+Get
+http://localhost:8081/viewMovieList
+
+Get
+http://localhost:8081/movieByTheatreId/1
+
+
+Post
+http://localhost:8081/addTheatre
+
+{
+
+	"theatreName" : "Venkatesh Movie plex",
+	"theatreCity" : "Kurnool",
+	"listOfScreens" : [{
+        "screenName":"A",
+        "rowCount":"4",
+        "columnCount":"4"
+    }],
+	"managerName" : "vamsi",
+	"managerContact" : "9164688481"
+}
+
+Post
+http://localhost:8081/addShow
+
+{
+	"showStartTime" : "2021-12-02T09:08:34.511Z",
+	"showEndTime" : "2021-12-02T11:31:44.511Z",
+	"showName" : "Morning Show",
+	"movieId" : "1",
+	"screenId" : "5",
+	"theatreId" : "4"
+}
+
+
+Post
+http://localhost:8081/updateShow
+
+{
+    "showId": 1,
+    "showStartTime": "2021-12-02T12:31:34.511",
+    "showEndTime": "2012-12-02T03:28:44.511",
+    "showName": "Afternoon Show",
+    "movieId": 1,
+    "screenId": 5,
+    "theatreId": 1
+}
+
+Delete
+http://localhost:8081/removeShow/2
+
+Get
+http://localhost:8081/showById/1
+
+Get
+http://localhost:8081/showBytheatreId/1
+
+Get
+http://localhost:8081/viewAllShows
+
+
+Post
+http://localhost:8081/addBooking
+
+{
+    "showId":"1",
+    "bookingDate":"2021-12-02T09:08:44.511Z",
+    "transcationId":"1234",
+    "transcationMode":"cash",
+    "transcationStatus":"Sucess",
+    "totalCost":"300",
+    "ticket":{
+        "noOfSeats":"1",
+        "seatNumber":[{
+            "seatNumber":"04",
+            "type":"gold",
+            "price":"280"
+        }],
+        "ticketStatus":"true"
+    }
+ 
+}
+
+
+Post
+http://localhost:8081/updateBooking
+
+{
+    "bookingId": 1,
+    "showId": 1,
+    "bookingDate": "2021-12-02",
+    "transcationId": "1236",
+    "transcationMode": "cash",
+    "transcationStatus": "Sucess",
+    "totalCost": "600.0",
+    "ticket": {
+        "ticketId": "1",
+        "noOfSeats": "2",
+        "seatNumber": [
+            {
+                "seatId": "1",
+                "seatNumber": "2,3",
+                "type": "gold",
+                "price": "560.0"
+            }
+        ],
+        "bookingRef": null,
+        "ticketStatus": true
+    }
+}
+
+Delete
+http://localhost:8081/cancelBooking/1
+
+Get
+http://localhost:8081/bookingByMovieId/1
+
+Get
+http://localhost:8081/bookingByShowId/2
+
+Get
+http://localhost:8081/calculateTotalCost/2
+
+Post
+http://localhost:8081/bookingByDate
+{
+	
+	"bookingDate": "2021-12-02T09:08:44.511Z"
+}
+Post
+http://localhost:8081/addCustomer
+
+{
+    "customerName" : "Aravind",
+    "address" : "Kurnool",
+    "mobileNumber" : "9864828688",
+    "email":"aravind123018@gmail.com",
+    "password":"aravind1234"
+ 
+}
+
+Post
+http://localhost:8081/update
+ 
+{
+    "userId": 2,
+    "customerName": "Mahesh",
+    "address": "Kurnool",
+    "mobileNumber": "9866286838",
+    "email": "mahesh1808@gmail.com",
+    "password": "mahesh1238",
+    "booking": null
+}
+ 
+Delete
+http://localhost:8081/deleteCustomer/2
+
+Get 
+http://localhost:8081/viewbyId/1
+
+
+Get
+
+http://localhost:8081/viewbyMovieId/1
+
+post
+
+http://localhost:8081/addUser
+{
+    "userId":"1",
+    "password":"Anand",
+    "role":"Customer"
+  
+}
+Post
+http://localhost:8081/addAdmin
+
+{
+    "adminName":"Giridhar",
+    "adminContact":"9184681838"
+}
